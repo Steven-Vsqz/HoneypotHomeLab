@@ -1,5 +1,4 @@
-##This filters the raw data to display key information in readable format##
-
+#This filters the raw data to display key information in readable format
 failed_rdp_with_GEO_CL
 | extend latitude = extract("latitude:([0-9.-]+)", 1, RawData),
          longitude = extract("longitude:([0-9.-]+)", 1, RawData),
