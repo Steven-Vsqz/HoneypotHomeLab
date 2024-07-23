@@ -5,48 +5,39 @@ The PowerShell script in this repository is designed to extract information from
 <br />
 In this demonstration, I configure <strong>Azure Sentinel (SIEM)</strong> and link it to a live virtual machine functioning as a honeypot. We will monitor real-time RDP brute force attacks originating from various global locations. By using a custom PowerShell script, we can retrieve the attackers' geolocation information and display it on an Azure Sentinel map.
 <br />
-
+<br />
+<p align="center">
+<img src="https://i.imgur.com/VHxkSKa.png" height="80%" width="80%" alt="Failed RDP Steps"/>
+</p>
 
 <h2>Languages and Utilities Used</h2>
 
 - <b>Microsoft Azure: Setup Sentinel on a honeypot virtual machine</b>
 - <b>PowerShell: Extract RDP failed logon logs from Windows Event Viewer</b> 
-- <b>ipgeolocation.io: IP Address to Geolocation API</b>
+- <b><a href="https://ipgeolocation.io/">ipgeolocation.io</a>: IP Address to Geolocation API</b>
 
 <h2>Environments Used </h2>
 
 - <b>Windows 10</b>
 
-<h2>Program walk-through:</h2>
+<h2>Overview</h2>
 
-<p align="center">
-Launch the utility: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+After creating a free Microsoft Azure account, I set up a live virtual machine configured as a honeypot to attract attackers. I implemented Azure Sentinel (SIEM) to monitor and map the global locations of these attacks using the third-party API ipgeolocation.io. A custom PowerShell script was utilized to collect the attackers' geolocation information, log it in a .txt file, and input the data into Sentinel for visual mapping.
+
+<h1 align="center">
+Recorded Brute Force RDP attempt: <br/>
+<img src="https://i.imgur.com/oArZdLj.png" height="80%" width="80%" alt="Failed RDP Steps"/>
 <br />
 <br />
-Select the disk:  <br/>
-<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Real-time failed RDP in powershell: <br/>
+<img src="https://i.imgur.com/h9Qv34B.png" height="80%" width="80%" alt="Failed RDP Steps"/>
 <br />
 <br />
-Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+World map of incoming attacks:  <br/>
+<img src="https://i.imgur.com/BJ3JpNh.png" height="80%" width="80%" alt="Failed RDP Steps"/>
 <br />
 <br />
-Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
+</h1>
 
 <!--
  ```diff
