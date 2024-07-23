@@ -10,19 +10,19 @@ In this demonstration, I configure <strong>Azure Sentinel (SIEM)</strong> and li
 <img src="https://i.imgur.com/VHxkSKa.png" height="80%" width="80%" alt="Failed RDP Steps"/>
 </p>
 
-<h2>Languages and Utilities Used</h2>
+<h2>🛠️Languages and Utilities Used</h2>
 
-- <b>Microsoft Azure: Setup Sentinel on a honeypot virtual machine</b>
+- <b><a href="https://azure.microsoft.com/en-us/free">Microsoft Azure</a>: Setup Sentinel on a honeypot virtual machine</b>
 - <b>PowerShell: Extract RDP failed logon logs from Windows Event Viewer</b> 
 - <b><a href="https://ipgeolocation.io/">ipgeolocation.io</a>: IP Address to Geolocation API</b>
 
-<h2>Environments Used </h2>
+<h2>🖥️Environments Used </h2>
 
 - <b>Windows 10</b>
 
-<h2>Overview</h2>
+<h2>👨‍💻What was done</h2>
 
-After creating a free Microsoft Azure account, I set up a live virtual machine configured as a honeypot to attract attackers. I implemented Azure Sentinel (SIEM) to monitor and map the global locations of these attacks using the third-party API ipgeolocation.io. A custom PowerShell script was utilized to collect the attackers' geolocation information, log it in a .txt file, and input the data into Sentinel for visual mapping.
+After creating a free Microsoft Azure account, I set up a live virtual machine configured as a honeypot to attract attackers. I implemented Azure Sentinel (SIEM) to monitor and map the global locations of these attacks using the third-party API. A custom PowerShell script was utilized to collect the attackers' geolocation information, log it into a .txt file, and input the data into Sentinel for visual mapping.
 
 <h1 align="center">
 Recorded Brute Force RDP attempt: <br/>
