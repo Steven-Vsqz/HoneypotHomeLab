@@ -5,7 +5,6 @@ The PowerShell script in this repository is designed to extract information from
 <br />
 In this demonstration, I configure <strong>Azure Sentinel (SIEM)</strong> and link it to a live virtual machine functioning as a honeypot. We will monitor real-time RDP brute force attacks originating from various global locations. By using a custom PowerShell script, we can retrieve the attackers' geolocation information and display it on an Azure Sentinel map.
 <br />
-<br />
 <p align="center">
 <img src="https://i.imgur.com/VHxkSKa.png" height="80%" width="80%" alt="Failed RDP Steps"/>
 </p>
