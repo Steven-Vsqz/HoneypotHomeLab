@@ -5,8 +5,8 @@ This project demonstrates how to **detect failed Remote Desktop Protocol (RDP) b
 A custom honeypot virtual machine (VM) was configured in **Microsoft Azure**, monitored in real-time via **Sentinel (SIEM)**. Detected attacks were analyzed using a **custom PowerShell script** that gathered geolocation data from external APIs, visualized live on a world map.
 
 ---
-
-## 📸 Demo Snapshots
+<details closed>
+<summary>📸 Demo Snapshots</summary>
 
 <p align="center">
   <b>📌 Brute Force RDP Attempt (Recorded)</b><br>
@@ -18,7 +18,7 @@ A custom honeypot virtual machine (VM) was configured in **Microsoft Azure**, mo
   <b>📌 Azure Sentinel World Map of Attack Sources</b><br>
   <img src="https://i.imgur.com/BJ3JpNh.png" width="80%" alt="Sentinel Map Screenshot" />
 </p>
-
+</details>
 ---
 
 ## 🛠️ Tools & Technologies Used
