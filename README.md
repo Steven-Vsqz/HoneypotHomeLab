@@ -1,49 +1,66 @@
-<h1>Failed RDP to IP Geolocation Information</h1>
+# 🌍 Failed RDP to IP Geolocation Tracking
 
-The PowerShell script in this repository is designed to extract information from Windows Event Logs regarding failed Remote Desktop Protocol (RDP) attacks. It then uses a third-party API to gather geographic details about the attacker's location.
-<br />
-<br />
-In this demonstration, I configure <strong>Azure Sentinel (SIEM)</strong> and link it to a live virtual machine functioning as a honeypot. We will monitor real-time RDP brute force attacks originating from various global locations. By using a custom PowerShell script, we can retrieve the attackers' geolocation information and display it on an Azure Sentinel map.
-<br />
+This project demonstrates how to **detect failed Remote Desktop Protocol (RDP) brute-force attacks**, extract log data via **PowerShell**, and **map attacker IP geolocation** using **Azure Sentinel** and a third-party API.
+
+A custom honeypot virtual machine (VM) was configured in **Microsoft Azure**, monitored in real-time via **Sentinel (SIEM)**. Detected attacks were analyzed using a **custom PowerShell script** that gathered geolocation data from external APIs, visualized live on a world map.
+
+---
+
+## 📸 Demo Snapshots
+
 <p align="center">
-<img src="https://i.imgur.com/VHxkSKa.png" height="80%" width="80%" alt="Failed RDP Steps"/>
+  <b>📌 Brute Force RDP Attempt (Recorded)</b><br>
+  <img src="https://i.imgur.com/oArZdLj.png" width="80%" alt="RDP Attempt Screenshot" />
+  <br><br>
+  <b>📌 Real-time PowerShell Log Output</b><br>
+  <img src="https://i.imgur.com/h9Qv34B.png" width="80%" alt="PowerShell Output Screenshot" />
+  <br><br>
+  <b>📌 Azure Sentinel World Map of Attack Sources</b><br>
+  <img src="https://i.imgur.com/BJ3JpNh.png" width="80%" alt="Sentinel Map Screenshot" />
 </p>
 
-<h2>🛠️Languages and Utilities Used</h2>
+---
 
-- <b><a href="https://azure.microsoft.com/en-us/free">Microsoft Azure</a>: Setup Sentinel on a honeypot virtual machine</b>
-- <b>PowerShell: Extract RDP failed logon logs from Windows Event Viewer</b> 
-- <b><a href="https://ipgeolocation.io/">ipgeolocation.io</a>: IP Address to Geolocation API</b>
+## 🛠️ Tools & Technologies Used
 
-<h2>🖥️Environments Used </h2>
+- 🧠 **Microsoft Azure** – Hosted Sentinel on a live VM honeypot  
+- 💻 **PowerShell** – Parsed Windows Event Logs for failed RDP attempts  
+- 🌐 [**ipgeolocation.io**](https://ipgeolocation.io/) – Converted attacker IPs to geolocation info
 
-- <b>Windows 10</b>
+---
 
-<h2>👨‍💻What was done</h2>
+## 🧪 Environment
 
-After creating a free Microsoft Azure account, I set up a live virtual machine configured as a honeypot to attract attackers. I implemented Azure Sentinel (SIEM) to monitor and map the global locations of these attacks using the third-party API. A custom PowerShell script was utilized to collect the attackers' geolocation information, log it into a .txt file, and input the data into Sentinel for visual mapping.
+- 🖥️ Windows 10 (Honeypot VM)
 
-<h1 align="center">
-Recorded Brute Force RDP attempt: <br/>
-<img src="https://i.imgur.com/oArZdLj.png" height="80%" width="80%" alt="Failed RDP Steps"/>
-<br />
-<br />
-Real-time failed RDP in powershell: <br/>
-<img src="https://i.imgur.com/h9Qv34B.png" height="80%" width="80%" alt="Failed RDP Steps"/>
-<br />
-<br />
-World map of incoming attacks:  <br/>
-<img src="https://i.imgur.com/BJ3JpNh.png" height="80%" width="80%" alt="Failed RDP Steps"/>
-<br />
-<br />
-</h1>
+---
 
-<!--
- ```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
-```
---!>
+## 🔍 What I Did
+
+1. ✅ Created a **free-tier Azure account** and deployed a **Windows 10 VM**  
+2. 🧲 Configured the VM as a **honeypot** to lure attackers via exposed RDP  
+3. 🛡️ Connected the VM to **Azure Sentinel** for centralized log collection  
+4. 📜 Wrote a **PowerShell script** to extract failed RDP login attempts from Event Viewer  
+5. 🌍 Queried the **ipgeolocation.io API** to map attacker origin by IP  
+6. 📈 Sent the geolocation data into **Sentinel** for **visual map-based analysis**  
+
+---
+
+## 🎯 Project Purpose
+
+This project simulates a **real-world SOC workflow** involving:
+
+- RDP brute-force detection  
+- IP-to-location correlation  
+- SIEM-based threat mapping  
+- Custom script automation
+
+It highlights how SIEMs and scripts can be combined for **threat intelligence**, **geospatial visualization**, and **alert triage** in cybersecurity operations.
+
+---
+
+## 📷 Original Visualization
+
+<p align="center">
+  <img src="https://i.imgur.com/VHxkSKa.png" width="80%" alt="Full Process Overview" />
+</p>
